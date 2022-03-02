@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Chat Group</title>
+    <style>
+        div.form-container {
+            position: absolute;
+            top:40%;
+            left: 35%;
+            width: 400px;
+            height: 300px;
+
+        }
+        div.chatusers{
+            display: inline-block;
+            margin: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        button {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="form-container">
+        
+        <form method="post" action="/chat/join">
+            <h1>Welcome to the Chat Group!</h1>   
+            <div class="chatusers">
+                <label for="user">Chat As: </label>         
+                <select id="user" name="user">                
+                    <option value="60366">Erwin</option>
+                    <option value="2">Adam</option>
+                    <option value="10">Pamela Stevenson</option>
+                    <option value="60741">Rita Hughes</option> 
+                    <option value="21411">Corey Cosgrove</option>
+            </select>
+            </div>
+            <div class="chatusers">
+            <label for="groups">Groups/Thread: </label>
+            <select id="groups" name="groups">
+                <option value="19:ER_mX2yqdiORj2Uk55NTo-OG5prl9rOwaBST7CmCUAk1@thread.v2">Jennifer Anne</option>
+                <option value="19:AlCPZ-FnJO0OshJ2TqfnMVtPsN_pmGjIhHEN-9OtWRM1@thread.v2">Jose Hernandess</option>
+                <option value="19:nqu9vbgn1RutjufcK2OsnLcekuVuy3tq8XAk4TVQIYE1@thread.v2">Karen Loring</option>
+                <option value="19:-DCZB3vfk3NWC5bUQpuSL4GFZNyJyZ6bRJovpVKaBLc1@thread.v2">Barbara Joy Gundry</option>
+                <option value="19:r87yMcHIi_6YfQDE7RVJaStmfKKxalIgchckIssSA281@thread.v2">Rita Hughes</option>
+            </select>
+            </div>
+            <div>
+                <button type="submit">Press To Join</button>
+            </div>
+
+
+            
+            
+        </form>
+        
+        
+    </div>
+    
+</body>
+</html>

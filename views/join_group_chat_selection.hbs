@@ -1,0 +1,35 @@
+<main class="App">
+        <form method="post" action="/chat/rejoin-chat-group">
+            <div>
+                <h1 style="text-align: center;">JOIN</h1>
+                <hr>
+
+                <div class="selection-group">                    
+                    <input id="ro-name-field" type="text" value="{{ person.chvFirstName }} {{ person.chvLastName}}" readonly>
+                </div>
+                {{#if groups.length}}
+                <div>
+                    <div class="selection-group">
+                        <select id="group" name="group" onchange="enableSubmit()">
+                            <option selected disabled>Choose Chat Group/Channel </option>
+                            {{#each groups}}
+                                <option value="{{chvConversationSubGroupUID}}">{{chvConversationSubGroupName}}</option>
+                            {{/each}}
+                        </select>
+                    </div>                
+                    <div class="selection-group">
+                        <button id="join-me" type="submit" disabled>Enter Group</button>
+                    </div>                    
+                </div>
+                {{else}}
+                    <div><span>You do not belong to a group</span></div>
+                {{/if}}
+                
+        </div>
+        </form>
+        <script type="text/javascript">
+            function enableSubmit(){
+                document.getElementById("join-me").disabled = false;
+            }
+        </script>
+    </main>

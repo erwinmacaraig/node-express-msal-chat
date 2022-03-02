@@ -1,0 +1,24 @@
+<main id="chat-container">
+      <h4>Azure Communication Services</h4>
+      <h1> Hi {{communicationUserName}}. Welcome to <i> {{groupName}} </i> Group Chat Quickstart </h1>
+      <div>
+          <textarea name="message" id="message" cols="110" rows="30" readonly></textarea>
+          <input type="hidden" id="accessToken" value="{{accessToken}}">
+          <input type="hidden" id="communicationUserId" value="{{communicationUserId}}">
+          <input type="hidden" id="communicationUserName" value="{{communicationUserName}}">
+          <input type="hidden" id="threadId" value="{{threadId}}">
+          <input type="hidden" id="intConversationUserID" value="{{intConversationUserID}}">
+          <input type="hidden" id="accessexpiry" value="{{accessexpiry}}">
+      </div>
+      <div>
+        <section class="message-sender-ctr">
+          <label for="messageToSend">Message:</label>
+          <input type="text" name="messageToSend" id="messageToSend" />
+        </section>
+        <section class="message-sender-ctr">
+          <button type="button" id="btnSendMessage">Send Message</button>
+          <button type="button" id="signOut" class="btn btn-secondary" onclick="signOut()">Sign-out</button>
+        </section>
+      </div>
+    </main>    
+    <script src="../javascripts/bundle.js"></script>

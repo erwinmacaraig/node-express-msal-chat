@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    color: #fff;
+}
+
+body {
+    min-height: 100vh;
+    background-color: dodgerblue;
+}
+
+#chat-container {
+    margin-left:145px;
+}
+
+input#messageToSend {
+    width:535px;
+  }
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  padding: 1rem 0.5rem;
+}
+
+section#login-section {
+    width: 100%;
+    max-width: 420px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    padding-bottom: 1rem;
+}
+
+.chat-window {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+a, a:visited {
+    color: #fff;
+}
+
+section#login-section input[type="text"],
+section#login-section input[type="password"],
+section#login-section button,
+section#login-section textarea {
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+input[type="text"]#ro-name-field {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+select#group {
+    font-size: 26px;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+select#groups option{
+    font-size: 22px;
+}
+
+.selection-group {
+    margin-top: 5px;
+}
+
+div.selection-group button {
+    font-size: 35px;
+    padding: 5px;
+    width: 100%;
+    color: white;
+    background: #f7941d;
+    border-color: #f7941d;
+    
+}
+
+section.message-sender-ctr input[type="text"], 
+section.message-sender-ctr textarea,
+section.message-sender-ctr button {
+    font-size: 16px;
+    padding: 0.25rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+section#login-section label,
+section#login-section button,
+section#login-section p {
+  margin-top: 3rem;
+}
+
+section#login-section button {
+  padding: 0.5rem;
+}
+
+textarea#message{
+    padding: 10px 0px 0px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background: gainsboro;     
+}
+
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+.hide {
+    display: none;
+}
+
+.valid {
+    color: limegreen;
+    margin-left: 0.25rem;
+}
+
+.invalid {
+    color: red;
+    margin-left: 0.25rem;
+}
+
+.errmsg {
+    background-color: lightpink;
+    color: firebrick;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.line {
+    display: inline-block;
+}
+
+.flexGrow {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+section.message-sender-ctr{
+    width: 46%;
+    margin: 10px 5px 10px 0px;
+    display: inline-block;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <script type="text/javascript" src="./javascripts/ajax.js"></script>
+    
+</head>
+<body>
+    
+    
+    <main class="App">
+        <div id="my-loader"></div>
+        <section id="login-section">
+            <h1 style="text-align: center;">KinderCaring Chat</h1>
+            <button type="button" id="signIn" class="btn btn-secondary" onclick="signIn()">Sign-in</button>
+            <button type="button" id="signOut" class="btn btn-secondary" onclick="signOut()">Sign-out</button>
+            <p>
+                Need an Account?<br />
+                <span className="line">
+                    <a>Sign Up</a>
+                </span>
+            </p>
+        </section>
+    </main>
+    <script type="text/javascript">
+        console.log(document.getElementById("signIn"));
+       if (localStorage.getItem('myAccount')){
+           // let account = JSON.parse(localStorage.getItem('myAccount'));            
+           // let name = account['name'];
+           // processChatLogin();
+           // document.write('<h1>Hello ' + name + '</h1>');
+           // window.location.replace("/chat/process-chat-login");
+           
+           document.querySelector("#signIn").style.display = "none";
+           
+       } else {
+           document.querySelector('#signOut').style.display = "none";
+           
+       }
+   </script>
+    <script src="https://alcdn.msauth.net/browser/2.14.2/js/msal-browser.min.js" integrity="sha384-ggh+EF1aSqm+Y4yvv2n17KpurNcZTeYtUZUvhPziElsstmIEubyEB6AIVpKLuZgr" crossorigin="anonymous"></script>
+    <script src="./javascripts/authConfig.js"></script>  
+    <script src="./javascripts/authRedirect.js"></script>  
+</body>
+</html>
